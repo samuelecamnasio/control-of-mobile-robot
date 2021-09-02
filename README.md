@@ -1,7 +1,5 @@
 # control-of-mobile-robots
 
-## autohors:
-
 Andrea Bonatti
 
 Samuele Camnasio
