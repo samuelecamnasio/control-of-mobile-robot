@@ -1,0 +1,7 @@
+RRT1: very high maxIterations(more than 1 milion), small minTurningRadius(0.8), resulting in a bad trajectory for our bicycle model.
+
+RRT2: same parameters as version used in the generated node, but interpolation to 300 states, instead of 150, the trajectory is a bit smoother and acts better especially with the dynamic model, where the version with 150 states has some more problem avoiding some walls, but given the length of the plan only a small amount of road is visible in RVIZ due to the limitations of the publisher node with simulink.
+
+RRT3: less nodes than RRT1, but still too small minTurningRadius(1.0) to have a good solution.
+
+sPRM1: connection distance set to 30, still a good solution, not many differences with the one used in the generated node,some more nodes required to compute the solution, and some less states in the final path, 70 instead of 77.
