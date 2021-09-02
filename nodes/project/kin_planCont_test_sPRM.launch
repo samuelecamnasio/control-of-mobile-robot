@@ -1,0 +1,16 @@
+<launch>
+  <!-- Load parameters into the parameter server -->
+  <param name="use_sim_time" value="true"/>
+
+  <!-- Run rviz -->
+  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find project)/rviz/robot.rviz" /> 
+
+  <!-- Run the controller -->
+  <node pkg="bicycle_kin_plancont" type="bicycle_kin_plancont_node" name="bicycle_kin_plancont" />
+
+  <!-- Run the simulator -->
+  <node pkg="bicycle_kin_sim" type="bicycle_kin_sim_node" name="bicycle_kin_sim" />
+
+  <!-- Run the planner -->
+  <node pkg="planpublisher_test" type="planpublisher_test_node" name="planpublisher_test" />
+</launch>
